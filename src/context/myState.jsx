@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import MyContext from './myContext';
 
 function myState(props) {
+  const[loading,setLoading]=useState(false)
    const [mode,setMode]=useState('light');
    const toggleMode=()=>{
     if(mode==='light'){
@@ -9,6 +10,7 @@ function myState(props) {
       document.body.style.backgroundColor ="rgb(17,24,39)";
     }
     else{
+      setMode('light')
       document.body.style.backgroundColor='white'
     }
    }
