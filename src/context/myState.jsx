@@ -3,6 +3,7 @@ import MyContext from './myContext';
 
 function myState(props) {
   const[loading,setLoading]=useState(false)
+
    const [mode,setMode]=useState('light');
    const toggleMode=()=>{
     if(mode==='light'){
@@ -15,7 +16,7 @@ function myState(props) {
     }
    }
   return (
-    <MyContext.Provider value={{mode,toggleMode}}>
+    <MyContext.Provider value={{mode,toggleMode,setLoading}}>
        {props.children}
     </MyContext.Provider>
   )
