@@ -8,7 +8,7 @@ function AddProduct() {
         <div>
             <div className=' flex justify-center items-center h-screen'>
                 <div className=' bg-gray-800 px-10 py-10 rounded-xl '>
-                    <div className="">
+                    <div className="product-fields">
                         <h1 className='text-center text-white text-xl mb-4 font-bold'>Add Product</h1>
                     </div>
                     <div>
