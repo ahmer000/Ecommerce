@@ -6,7 +6,7 @@ import { addToCart } from '../../redux/cartSlice'
 
 function ProductCard() {
     const context = useContext(myContext)
-    const { mode, product } = context;
+    const { mode, product,searchkey,setSearchkey,filterType,setfilterType,filterPrice,setfilterPrice } = context;
 
     const dispatch = useDispatch()
     const cartItems = useSelector((state) => state.cart)
@@ -31,7 +31,7 @@ function ProductCard() {
                 </div>
 
                 <div className="flex flex-wrap -m-4">
-                    {product.map((item, index) => {
+                    {product.filter((obj)=> obj.title.toLowerCase().includes(searchkey)).filter((obj)=>obj.category.toLowerCase().includes(filterType)).map((item, index) => {
                         const { title, price, imageUrl } = item;
                         return (
                             <div key={index} className="p-4 md:w-1/4  drop-shadow-lg " >

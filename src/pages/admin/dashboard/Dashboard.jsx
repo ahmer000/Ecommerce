@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import {FaUserTie } from 'react-icons/fa';
 import myContext from '../../../context/myContext';
 import Layout from '../../../components/layout/Layout';
-import DashboardTab from './DashboarTab';
+import DashboardTab from './DashboardTab';
 
 function Dashboard() {
     const context = useContext(myContext)
